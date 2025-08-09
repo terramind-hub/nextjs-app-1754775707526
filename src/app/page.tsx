@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import ProductGrid from '@/components/ProductGrid';
-import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Store - Home',
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-      
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4 text-center">
