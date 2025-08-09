@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { useCart } from '@/hooks/useCart';
 import { Product } from '@/types';
-import { formatCurrency } from '@/lib/utils';
+import { formatPrice } from '@/lib/utils';
 import { ShoppingCart, Star } from 'lucide-react';
 import Image from 'next/image';
 
@@ -74,11 +74,11 @@ export default function ProductCard({ product }: ProductCardProps) {
           
           <div className="flex items-center gap-2">
             <span className="text-xl font-bold">
-              {formatCurrency(product.price)}
+              {formatPrice(product.price)}
             </span>
             {product.originalPrice && product.originalPrice > product.price && (
               <span className="text-sm text-muted-foreground line-through">
-                {formatCurrency(product.originalPrice)}
+                {formatPrice(product.originalPrice)}
               </span>
             )}
           </div>
